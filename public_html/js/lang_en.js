@@ -1,7 +1,14 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+var Text = new Object();
+Text = {
+    //Wrapper
+    "0": "kickass",
+    "1": "Desktop",
+    "2": "Tasks",
+    "3": "Contacts",
+    "4": "Clients",
+    "5": "Projects",
+    "6": "Chat",
+    "11": "personal data",
+    "12": "settings",
+    "13": "logout"
+};

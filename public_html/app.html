@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Keywords" content="">
+        <meta name="Description" content="">
+        <base href="">
+        <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery-ui.theme.css" rel="stylesheet" type="text/css">
+        <link href="css/app.css" rel="stylesheet" type="text/css">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.js" type="text/javascript"></script>
+        <script src="js/data.js" type="text/javascript"></script>
+        <script src="js/lang_en.js" type="text/javascript"></script>
+        <script src="js/processor.js" type="text/javascript"></script>
+        <title>Kickass management free system</title>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="main-caption">
+                <div class="drop-call apps-menu" data-group="mt_apps">
+                    <div class="center-icon apps-menu-btn">
+                    </div>
+                    <div class="drop-down" id="menu0" data-group="mt_apps">
+                        <ul>
+                            <li class="app-select txt" data-href="app-desktop" data-txtid="1"></li>
+                            <li class="app-select txt" data-href="app-tasks" data-txtid="2"></li>
+                            <li class="app-select txt" data-href="app-contacts" data-txtid="3"></li>
+                            <li class="app-select txt" data-href="app-clients" data-txtid="4"></li>
+                            <li class="app-select txt" data-href="app-projects" data-txtid="5"></li>
+                            <li class="app-select txt" data-href="app-chat" data-txtid="6"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-caption-name">
+                    kickass
+                </div>
+                <div class="drop-call user-block" data-group="mt_user">
+                    <div class="active-user">
+                    </div>
+                    <div class="drop-down" id="menu1" data-group="mt_user">
+                        <ul>
+                            <li data-href="user-data" class="app-select txt" data-txtid="11"></li>
+                            <li data-href="user-settings" class="app-select txt" data-txtid="12"></li>
+                            <li data-href="logout" class="txt" data-txtid="13"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="drop-call main-menu" data-group="mt_menu" data-app="app-desktop">
+                    <div class="center-icon main-menu-btn">
+                    </div>
+                    <div class="drop-down" id="menu2" data-group="mt_menu">
+                        <ul>
+                            <li data-href="#tabs-1" class="txt" data-txtid="0"></li>
+                            <li data-href="#tabs-3" class="txt" data-txtid="0"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="drop-call main-menu" data-group="mt_menu" data-app="app-tasks">
+                    <div class="center-icon main-menu-btn">
+                    </div>
+                    <div class="drop-down" id="menu3" data-group="mt_menu">
+                        <ul>
+                            <li data-href="#tabs-1" class="txt" data-txtid="0"></li>
+                            <li data-href="show-filter" class="txt" data-txtid="0"></li>
+                            <li data-href="hide-filter" class="txt" data-txtid="0"></li>
+                            <li data-href="show-add" class="txt" data-txtid="0"></li>
+                            <li data-href="hide-add" class="txt" data-txtid="0"></li>
+                            <li data-href="#tabs-3" class="txt" data-txtid="0"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="drop-call main-menu" data-group="mt_menu" data-app="app-contacts">
+                    <div class="center-icon main-menu-btn">
+                    </div>
+                    <div class="drop-down" id="menu4" data-group="mt_menu">
+                        <ul>
+                            <li data-href="#tabs-1" class="txt" data-txtid="0"></li>
+                            <li data-href="#tabs-3" class="txt" data-txtid="0"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="drop-call main-menu" data-group="mt_menu" data-app="app-clients">
+                    <div class="center-icon main-menu-btn">
+                    </div>
+                    <div class="drop-down" id="menu5" data-group="mt_menu">
+                        <ul>
+                            <li data-href="#tabs-1" class="txt" data-txtid="0"></li>
+                            <li data-href="#tabs-3" class="txt" data-txtid="0"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="drop-call main-menu" data-group="mt_menu" data-app="app-projects">
+                    <div class="center-icon main-menu-btn">
+                    </div>
+                    <div class="drop-down" id="menu6" data-group="mt_menu">
+                        <ul>
+                            <li data-href="#tabs-1" class="txt" data-txtid="0"></li>
+                            <li data-href="#tabs-3" class="txt" data-txtid="0"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="drop-call main-menu" data-group="mt_menu" data-app="app-chat">
+                    <div class="center-icon main-menu-btn">
+                    </div>
+                    <div class="drop-down" id="menu7" data-group="mt_menu">
+                        <ul>
+                            <li data-href="#tabs-1" class="txt" data-txtid="0"></li>
+                            <li data-href="#tabs-3" class="txt" data-txtid="0"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content" data-app="app-desktop">
+                <p>desktop content here</p>
+            </div>
+            <div class="content" data-app="app-tasks">
+                <p>tasks content here</p>
+            </div>
+            <div class="content" data-app="app-contacts">
+                <p>contacts content here</p>
+            </div>
+            <div class="content" data-app="app-clients">
+                <p>clients content here</p>
+            </div>
+            <div class="content" data-app="app-projects">
+                <p>projects content here</p>
+            </div>
+            <div class="content" data-app="app-chat">
+                <p>chat content here</p>
+            </div>
+            <div class="content" data-app="user-data">
+                <p>user personal data content here</p>
+            </div>
+            <div class="content" data-app="user-settings">
+                <p>user settings content here</p>
+            </div>
+            <div class="main-placeholder">
+            </div>
+        </div>
+        <div class="main-footer">
+            <span>
+                Footer status string
+            </span>
+            <div>
+                OFF
+            </div>
+        </div>
+    </body>
+</html>

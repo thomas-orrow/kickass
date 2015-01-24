@@ -1,11 +1,7 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 22.01.2015, 16:37:07
-    Author     : Thomas
-*/
+.apps-menu-btn {
+  background-image: url(../images/icons/apps24.png); }
+
+.main-menu-btn {
+  background-image: url(../images/icons/menu24.png); }
 
 /*# sourceMappingURL=icons.css.map */

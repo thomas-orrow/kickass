@@ -20,11 +20,19 @@ a:hover {
 
 .drop-down {
   background-color: white;
-  border-color: lightgray;
-  color: black; }
+  border-color: lightgray; }
 
 .drop-down li:hover {
   background-color: lavender;
   color: darkred; }
 
-/*# sourceMappingURL=grey_skin.css.map */
+.login input[type="submit"] {
+  background-color: black; }
+
+.login a {
+  color: white; }
+
+.login a:hover {
+  color: red; }
+
+/*# sourceMappingURL=black.css.map */

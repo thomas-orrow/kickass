@@ -1,0 +1,242 @@
+/*Main Vars*/
+$minwidth: 335px;
+@import url(reset.css);
+@import url(black.css);
+@import url(pics.css);
+/*Common styles*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a:link, a:visited, a:active {
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 1.4em;
+    font-weight: normal;
+    margin: 25px 0 25px 20px;
+    text-align: justify;
+}
+h2 {
+    font-size: 1.3em;
+    margin: 15px 0 15px 0;
+    text-align: justify;
+}
+h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+    text-align: justify;
+}
+p {
+    font-size: 1.1em;
+    margin: 10px 0 10px 0;
+    text-align: justify;
+}
+ul, ol {
+    font-size: 1em;
+    margin: 0 0 0 30px;
+    text-align: left;
+}
+/*Main structure*/
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+.main-wrapper {
+    min-height: 100%;
+    width: 100%;
+    min-width: $minwidth;
+    margin-bottom: 0px;
+}
+* html .main-wrapper {
+    height: 100%;
+}
+.main-caption {
+    text-align: left;
+    height: 100px;
+}
+.main-caption-name {
+    float: left;
+    /*display: inline-block;*/
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 25px 0 0 10px;
+}
+.main-placeholder {
+    height: 0px;
+}
+.main-footer {
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+.main-caption > div {
+    vertical-align: top;
+}
+.main-caption span {
+    width: 100%;
+    display: inline-block;
+}
+.center-icon {
+    height: 24px;
+    width: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/*Dropdown*/
+.drop-down {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 101;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    box-shadow: 2px 5px 7px rgba(0,0,0,0.5);
+}
+.drop-down ul {
+    margin: 0;
+    padding: 10px;
+    width: auto;
+}
+.drop-down li {
+    display: block;
+    width: 100%;
+    padding: 5px 0 5px 0;
+}
+.drop-down li:hover {
+    cursor: pointer;
+}
+.drop-call > div {
+    cursor: pointer;
+}
+#menu0, #menu1, #menu2, #menu3, #menu4, #menu5 {
+    display: none;
+}
+.user-block .drop-down {
+    right: 10px;
+    top: 40px;
+}
+.content {
+    width: 100%;
+    min-height: 100%;
+}
+/*login form*/
+.login-container {
+    width: auto;
+    padding-left: 80px;
+}
+.login {
+    display: block;
+    /*display: inline-block;*/
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+.login > div:nth-of-type(1) {
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+}
+.login > div:nth-of-type(2) {
+    display: inline-block;
+    vertical-align: top;
+    margin: 23px 0 0 0;
+}
+.login > div > div {
+    display: inline-block;
+    width: 90%;
+    min-width: 210px;
+}
+.login label {
+    display: inline-block;
+    width: 35%;
+    min-width: 80px;
+    margin-top: 10px;
+}
+.login label:hover {
+    cursor: pointer;
+}
+.login input[type="text"], .login input[type="password"] {
+    width: 120px;
+    height: 25px;
+    font-size: 1.1em;
+    padding-left: 5px;
+}
+.login input[type="submit"] {
+    border: 0;
+}
+.login input[type="submit"]:hover {
+    cursor: pointer;
+}
+.login a {
+    display: inline-block;
+    width: 49%;
+    margin: 10px 0 0 0;
+    text-decoration: underline;
+}
+.login a:hover {
+    cursor: pointer;
+}
+@media all and (min-width: 415px) {
+    .login input[type="text"], .login input[type="password"] {
+        width: 60%;
+        min-width: 100px;
+    }
+}
+
+@media all and (min-width: 460px) {
+    .login input[type="text"], .login input[type="password"] {
+        width: 110px;
+    }
+    .login label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .login > div > div {
+        min-width: 115px;
+        margin-left: 10px;
+        width: 45%;
+    }
+    .login > div:nth-of-type(2) {
+        margin: 31px 0 0 0;
+    }
+}
+@media all and (min-width: 745px) {
+    .login label {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    .login > div > div {
+        margin-top: 10px;
+    }
+    .login > div:nth-of-type(2) {
+        margin: 17px 0 0 0;
+    }
+    .main-caption {
+        height: 80px;
+    }
+}
+@media all and (min-width: 780px) {
+    .main-placeholder {
+        height: 40px;
+    }
+    .main-footer {
+        display: block;
+        margin-top: -40px;
+        min-height: 30px;
+        padding-top: 10px;
+    }
+}

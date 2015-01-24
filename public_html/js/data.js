@@ -1,7 +1,8 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+var User = {
+    nick: "thomas_orrow_long_username",
+    pwd: "1234eqgvy3fnjk9retjim",
+    name: "Thomas Orrow",
+    id: "userid_08973625"
+};
 
 

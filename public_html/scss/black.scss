@@ -21,9 +21,17 @@ a:hover {
 .drop-down {
     background-color: white;
     border-color: lightgray;
-    color: black;
 }
 .drop-down li:hover {
     background-color: lavender;
     color: darkred;
+}
+.login input[type="submit"] {
+    background-color: black;
+}
+.login a {
+    color: white;
+}
+.login a:hover {
+    color: red;
 }
