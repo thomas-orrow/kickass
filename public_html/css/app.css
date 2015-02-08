@@ -137,6 +137,40 @@ body {
 .drop-down li:hover {
   cursor: pointer; }
 
+.slide-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 200px;
+  width: 40%;
+  max-width: 400px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: inherit; }
+
+.slide-menu div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 200px;
+  width: 100%;
+  max-width: 400px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: 100; }
+
+.slide-menu li {
+  position: relative;
+  z-index: 110;
+  padding: 10px 0 10px 0; }
+
+.slide-menu li span {
+  margin-left: 15px; }
+
 .drop-call > div {
   cursor: pointer; }
 

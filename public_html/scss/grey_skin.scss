@@ -27,3 +27,20 @@ a:hover {
     background-color: lavender;
     color: darkred;
 }
+.slide-menu {
+    background-color: transparent;
+}
+.slide-menu div {
+    background-color: black;
+    opacity: 0.9;
+}
+.slide-menu li {
+    background-color: transparent;
+    color: white;
+    opacity: 1;
+}
+.slide-menu li:hover {
+    background-color: black !important;
+    color: white;
+    opacity: 1;
+}

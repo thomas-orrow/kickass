@@ -1,6 +1,6 @@
 var Text = new Object();
 Text = {
-    //Wrapper
+    //Applications menu interface
     "0": "kickass",
     "1": "Desktop",
     "2": "Tasks",
