@@ -21,9 +21,24 @@ var Apps = {
         });
     },
     setUser: function () {
-        var nickName = '<img class=\"cover-image\" src=\"images\/select.png\">' + User.nick + '\n';
+        //var nickName = '<img class=\"cover-image\" src=\"images\/select.png\">' + User.nick + '\n';
+        var userPic;
+        if (User.userpic === "undefined") {
+            switch (User.sex) {
+                case 'male':
+                    userPic = '<img class=\"userpic\" width=\"60\" height=\"60\" src=\"\/kickass\/images\/icons\/mavatar.jpg\">';
+                    break;
+                case 'female':
+                    userPic = '<img class=\"userpic\" width=\"60\" height=\"60\" src=\"\/kickass\/images\/icons\/wavatar.jpg\">';
+                    break;
+                default:
+                    userPic = '<img class=\"userpic\" width=\"60\" height=\"60\" src=\"\/kickass\/images\/icons\/tavatar.jpg\">';
+            }
+        } else {
+            //real userpic
+        }
         $('.active-user').empty();
-        $('.active-user').append(nickName);
+        $('.active-user').append(userPic);
     },
     logout: function () {
         $('.txt[data-href="logout"]').on('click', function () {
@@ -31,12 +46,37 @@ var Apps = {
             //session cancel, page redirect
         });
     },
-    title: function () {
-        var appId = '.app-select[data-href="' + Apps.active + '"]';
-        var appTxtId = $(appId).attr('data-txtid');
-        var titleName = Text[0] + ': ' + Text[appTxtId];
+    title: function (appName) {
+        var appTitle;
+        switch (appName) {
+            case 'app-desktop':
+                appTitle = Text[1];
+                break;
+            case 'app-tasks':
+                appTitle = Text[2];
+                break;
+            case 'app-contacts':
+                appTitle = Text[3];
+                break;
+            case 'app-clients':
+                appTitle = Text[4];
+                break;
+            case 'app-projects':
+                appTitle = Text[5];
+                break;
+            case 'app-chat':
+                appTitle = Text[6];
+                break;
+            default:
+                appTitle = Text[0];
+                break;
+        }
+        return appTitle;
+    },
+    docTitle: function () {
+        var docTitle = Text[0] + ' | ' + Apps.title(Apps.active);
         $('title').empty();
-        $('title').append(titleName);
+        $('title').append(docTitle);
     },
     show: function (appName) {
         $('.content').each(function () {
@@ -54,8 +94,10 @@ var Apps = {
         $(contentName).css('display', 'block');
         $(selectName).css('display', 'none');
         $(menuName).css('display', 'inline-block');
+        $('.main-caption-name').empty();
         this.active = appName;
-        this.title();
+        $('.main-caption-name').append(Apps.title(Apps.active));
+        this.docTitle();
     },
     init: function () {
         this.setUser();
@@ -64,22 +106,27 @@ var Apps = {
     dropDown: function () {
         $('.main-wrapper').on('click', '.drop-call', function () {
             var mtGroup = $(this).attr('data-group');
-            var menuId = $(".drop-down[data-group='" + mtGroup + "']").attr("id");
+            var dropDown = $(".drop-down[data-group='" + mtGroup + "']");
+            var menuId = dropDown.attr("id");
             if (Apps.menuStatus[menuId] === "close") {
-                if ($(".drop-down[data-group='" + mtGroup + "']").hasClass('slide-menu')) {
-                    var slideWidth = $(".drop-down[data-group='" + mtGroup + "']").outerWidth(true);
-                    var marginLeft = '-' + slideWidth + "px";
-                    $(".drop-down[data-group='" + mtGroup + "']").css('margin-left', marginLeft);
-                    $(".drop-down[data-group='" + mtGroup + "']").css('display', 'block');
-                    $(".drop-down[data-group='" + mtGroup + "']").animate({"margin-left": 0}, 500);
-                    Apps.menuStatus[menuId] = "open";
+                var slideWidth = dropDown.outerWidth(true);
+                var marginSize = '-' + slideWidth + 'px';
+                if (dropDown.hasClass('from-left')) {
+                    dropDown.css('margin-left', marginSize);
+                    dropDown.css('display', 'block');
+                    dropDown.animate({'margin-left': 0}, 500);
+                } else if (dropDown.hasClass('from-right')) {
+                    dropDown.css('margin-right', marginSize);
+                    dropDown.css('display', 'block');
+                    dropDown.animate({'margin-right': 0}, 500);
                 } else {
-                    $(".drop-down[data-group='" + mtGroup + "']").css('display', 'block');
-                    Apps.menuStatus[menuId] = "open";
+                    dropDown.css('opacity', '0');
+                    dropDown.css('display', 'block');
+                    dropDown.animate({'opacity': 1}, 500);
                 }
+                Apps.menuStatus[menuId] = "open";
             }
         });
-        //$('.main-wrapper').on('click', '.slide-menu', false);
     },
     rollUp: function () {
         $(document).click(function (event) {
