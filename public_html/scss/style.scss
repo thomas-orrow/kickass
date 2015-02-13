@@ -50,7 +50,7 @@ html, body {
     padding: 0;
 }
 body {
-    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-family: Comfortaa, Calibri, Arial, Helvetica, sans-serif;
 }
 .main-wrapper {
     min-height: 100%;
@@ -61,29 +61,30 @@ body {
 * html .main-wrapper {
     height: 100%;
 }
-.main-caption {
+header {
+    display: block;
     text-align: left;
     height: 100px;
 }
 .main-caption-name {
     float: left;
-    /*display: inline-block;*/
-    font-size: 1.4em;
+    font-family: Poiret One, Comfortaa, Calibri, Arial, Helvetica, sans-serif;
+    font-size: 2em;
     font-weight: bold;
-    margin: 25px 0 0 10px;
+    margin: 22px 0 0 10px;
 }
 .main-placeholder {
     height: 0px;
 }
-.main-footer {
+footer {
     text-align: center;
-    font-weight: bold;
+    font-weight: normal;
     display: none;
 }
-.main-caption > div {
+header > div {
     vertical-align: top;
 }
-.main-caption span {
+header span {
     width: 100%;
     display: inline-block;
 }
@@ -183,7 +184,7 @@ body {
 }
 .login a {
     display: inline-block;
-    width: 49%;
+    width: 48%;
     margin: 10px 0 0 0;
     text-decoration: underline;
 }
@@ -225,7 +226,7 @@ body {
     .login > div:nth-of-type(2) {
         margin: 17px 0 0 0;
     }
-    .main-caption {
+    header {
         height: 80px;
     }
 }
@@ -233,7 +234,7 @@ body {
     .main-placeholder {
         height: 40px;
     }
-    .main-footer {
+    footer {
         display: block;
         margin-top: -40px;
         min-height: 30px;

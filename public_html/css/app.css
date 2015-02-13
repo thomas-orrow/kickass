@@ -50,7 +50,7 @@ html, body {
   padding: 0; }
 
 body {
-  font-family: Calibri, Arial, Helvetica, sans-serif; }
+  font-family: Comfortaa, Calibri, Arial, Helvetica, sans-serif; }
 
 .main-wrapper {
   min-height: 100%;
@@ -61,15 +61,17 @@ body {
 * html .main-wrapper {
   height: 100%; }
 
-.main-caption {
+header {
+  display: block;
   text-align: left;
   height: 60px; }
 
 .main-caption-name {
+  font-family: Poiret One, Comfortaa, Calibri, Arial, Helvetica, sans-serif;
   display: inline-block;
-  font-size: 1.4em;
-  font-weight: bold;
-  margin: 18px 0 0 5px; }
+  font-size: 2em;
+  font-weight: normal;
+  margin: 14px 0 0 5px; }
 
 .apps-menu-btn {
   margin: 18px 0 0 10px; }
@@ -94,15 +96,15 @@ body {
 .main-placeholder {
   height: 0px; }
 
-.main-footer {
+footer {
   text-align: center;
-  font-weight: bold;
+  font-weight: normal;
   display: none; }
 
-.main-caption > div {
+header > div {
   vertical-align: top; }
 
-.main-caption span {
+header span {
   width: 100%;
   display: inline-block; }
 
@@ -147,7 +149,9 @@ body {
   margin: 0;
   padding: 0;
   border: none;
-  border-radius: inherit; }
+  border-radius: inherit;
+  font-family: Poiret One, Comfortaa, Calibri, Arial, Helvetica, sans-serif;
+  font-size: 1.6em; }
 
 .from-left {
   left: 0; }
@@ -228,13 +232,13 @@ body {
   .main-placeholder {
     height: 40px; }
 
-  .main-footer {
+  footer {
     display: block;
     margin-top: -40px;
     min-height: 30px;
     padding-top: 10px; }
 
-  .main-footer div {
+  footer div {
     float: right;
     margin-right: 10px; } }
 

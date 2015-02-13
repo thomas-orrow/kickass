@@ -7,11 +7,11 @@ a {
 a:hover {
   color: #640000; }
 
-.main-caption {
+header {
   background-color: black;
   color: white; }
 
-.main-footer {
+footer {
   background: #5d94f2;
   color: white; }
 
